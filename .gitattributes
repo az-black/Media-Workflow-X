@@ -8,21 +8,41 @@
 # GitHub Linguist Language Stats Configuration
 # =============================================================================
 
-# Installer & Setup scripts (dianggap sebagai installer/tooling pendukung)
+# 1. Kecualikan installer Inno Setup dari diagram Languages GitHub
+*.iss linguist-detectable=false
+*.iss linguist-vendored=true
+installer/** linguist-detectable=false
 installer/** linguist-vendored=true
-setup_tools.bat linguist-vendored=true
-setup_tools.ps1 linguist-vendored=true
 
-# Platform runner templates Flutter (Android, iOS, macOS, Linux, Web)
+# 2. Kecualikan skrip otomasi & utilitas
+setup_tools.bat linguist-detectable=false
+setup_tools.bat linguist-vendored=true
+setup_tools.ps1 linguist-detectable=false
+setup_tools.ps1 linguist-vendored=true
+test_pid.ps1 linguist-detectable=false
+test_pid.ps1 linguist-vendored=true
+test_word.ps1 linguist-detectable=false
+test_word.ps1 linguist-vendored=true
+*.ps1 linguist-detectable=false
+*.ps1 linguist-vendored=true
+
+# 3. Kecualikan template platform bawaan Flutter (Android, iOS, macOS, Linux, Web)
 frontend_desktop/android/** linguist-vendored=true
 frontend_desktop/ios/** linguist-vendored=true
 frontend_desktop/linux/** linguist-vendored=true
 frontend_desktop/macos/** linguist-vendored=true
 frontend_desktop/web/** linguist-vendored=true
 
-# Kode Sumber Inti Aplikasi (Akan dihitung sebagai bahasa utama: Dart, Go, C++)
+# 4. Petakan Bahasa Utama Aplikasi Secara Global (Dart, Go, C++)
+*.dart linguist-detectable=true
+*.dart linguist-language=Dart
 frontend_desktop/lib/** linguist-detectable=true
 frontend_desktop/lib/** linguist-language=Dart
-Backend/internal/** linguist-detectable=true
-Backend/main.go linguist-detectable=true
+
+*.go linguist-detectable=true
+*.go linguist-language=Go
+Backend/** linguist-detectable=true
+Backend/** linguist-language=Go
+
 Backend/tools/pdf_compressor/*.cpp linguist-detectable=true
+Backend/tools/pdf_compressor/*.cpp linguist-language=C++

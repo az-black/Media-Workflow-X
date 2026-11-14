@@ -1,3 +1,5 @@
+// Media Workflow X - High Performance Backend Service
+// Polyglot Engine: Go REST API Server, C++ (OpenCV + QPDF), and Real-ESRGAN NCNN Vulkan
 package main
 
 import (

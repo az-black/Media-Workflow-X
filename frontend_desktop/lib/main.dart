@@ -1,3 +1,5 @@
+// Media Workflow X - Modern Flutter Desktop Application
+// Entry Point for Media Processing Suite (Smart Compression, Conversion, PDF Manager, AI Upscaler)
 import 'dart:async';
 import 'dart:ui' as ui;
 
