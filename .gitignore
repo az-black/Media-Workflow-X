@@ -1,0 +1,22 @@
+# --- Output & Sampel Lokal ---
+output/
+sample_files/
+
+# --- Build & Tool Flutter ---
+Frontend/frontend/.dart_tool/
+Frontend/frontend/.idea/
+Frontend/frontend/build/
+Frontend/frontend/.flutter-plugins
+Frontend/frontend/.flutter-plugins-dependencies
+
+# --- Executable Go ---
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main
+
+# --- System & Editor Temp ---
+.DS_Store
+.vscode/
