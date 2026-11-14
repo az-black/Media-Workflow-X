@@ -1,22 +1,92 @@
-# --- Output & Sampel Lokal ---
+# =============================================================================
+# Media Workflow X - Comprehensive .gitignore
+# =============================================================================
+
+# --- Sub-repository Git Backups ---
+.git_backup/
+**/.git_backup/
+
+# --- Temporary Local Samples & Outputs ---
 output/
 sample_files/
+*.tmp
+*.tmp.pdf
+*.log
+*.bak
+*.swp
+*.orig
+**/*.$*.bkp
+**/.$*.bkp
 
-# --- Build & Tool Flutter ---
-Frontend/frontend/.dart_tool/
-Frontend/frontend/.idea/
-Frontend/frontend/build/
-Frontend/frontend/.flutter-plugins
-Frontend/frontend/.flutter-plugins-dependencies
-
-# --- Executable Go ---
+# --- Large Binaries & Compiled Executables ---
+# (Dapat diunduh / di-generate otomatis dengan setup_tools.bat atau setup_tools.ps1)
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-main
+*.bin
+*.param
+*.onnx
+*.pdb
+*.obj
+*.ilk
+*.exp
+*.lib
 
-# --- System & Editor Temp ---
-.DS_Store
+# Pertahankan placeholder folder tools
+!.gitkeep
+!**/.gitkeep
+
+# --- Installer Output ---
+installer/output/
+*.iss.bak
+
+# --- Backend (Go & C++) Build Artifacts ---
+Backend/dist/
+Backend/build/
+Backend/tools/pdf_compressor/build/
+Backend/tools/pdf_compressor/build_compressor/
+Backend/tools/qpdf/bin/*
+!Backend/tools/qpdf/bin/.gitkeep
+Backend/tools/realesrgan/*.exe
+Backend/tools/realesrgan/*.dll
+Backend/tools/realesrgan/models/*
+!Backend/tools/realesrgan/models/.gitkeep
+
+# --- Frontend Flutter Desktop Assets & Engine Binaries ---
+frontend_desktop/assets/engine/
+frontend_desktop/build/
+frontend_desktop/.dart_tool/
+frontend_desktop/.flutter-plugins
+frontend_desktop/.flutter-plugins-dependencies
+frontend_desktop/.pub-cache/
+frontend_desktop/.pub/
+frontend_desktop/windows/flutter/ephemeral/
+*.symbolDev
+*.symbols
+app.*.map.json
+
+# --- IDEs & Editors ---
 .vscode/
+Backend/.vscode/
+frontend_desktop/.vscode/
+.idea/
+Backend/.idea/
+frontend_desktop/.idea/
+*.iml
+*.ipr
+*.iws
+*.sln
+*.vcxproj*
+*.slnx
+*.code-workspace
+
+# --- OS-specific Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

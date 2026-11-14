@@ -1,0 +1,98 @@
+# =============================================================================
+# .gitignore - Backend App Pengompres Gambar & PDF
+# =============================================================================
+
+# --- 1. Executables, Binaries & Dynamic Libraries ---
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main
+
+# Large AI Model Weights & Parameter Files (Real-ESRGAN dsb)
+*.bin
+*.param
+*.onnx
+*.pth
+
+# --- 2. C/C++ Compiler & Build Objects ---
+*.obj
+*.o
+*.a
+*.lib
+*.pdb
+*.idb
+*.ilk
+*.exp
+
+# --- 3. CMake & Build Output Directories ---
+build/
+**/build/*
+!**/build/.gitkeep
+!**/build/README.md
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# --- 4. External Tools Binaries & Models ---
+# Folder QPDF: sembunyikan file executable dan dynamic library
+tools/qpdf/*
+!tools/qpdf/.gitkeep
+!tools/qpdf/README.md
+!tools/qpdf/bin/
+tools/qpdf/bin/*
+!tools/qpdf/bin/.gitkeep
+!tools/qpdf/bin/README.md
+
+# Folder Real-ESRGAN: sembunyikan binary portable dan model AI
+tools/realesrgan/*
+!tools/realesrgan/.gitkeep
+!tools/realesrgan/README.md
+!tools/realesrgan/README_*.md
+!tools/realesrgan/models/
+tools/realesrgan/models/*
+!tools/realesrgan/models/.gitkeep
+!tools/realesrgan/models/README.md
+
+# Folder PDF Compressor: abaikan seluruh hasil compile biner
+tools/pdf_compressor/build/*
+!tools/pdf_compressor/build/.gitkeep
+!tools/pdf_compressor/build/README.md
+
+# --- 5. Temporary & Processing Output Files ---
+dist/
+*.tmp
+*.tmp.*
+*.tmp.pdf
+temp_*
+output/
+output_*/
+compressed/
+logs/
+*.log
+
+# --- 6. Environment & IDE Configurations ---
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- 7. OS Metadata ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- 8. Exceptions: Pastikan Dokumen & Script Setup Tetap Terlacak Git ---
+!/**/.gitkeep
+!/**/README.md
+!/**/README_*.md
+!/**/CMakeLists.txt
+!/**/download_tools.ps1

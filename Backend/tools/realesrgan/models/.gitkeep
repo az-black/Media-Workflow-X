@@ -1,0 +1,3 @@
+# Folder ini digunakan untuk meletakkan model parameter Real-ESRGAN (*.bin dan *.param).
+# Jalankan script download_tools.ps1 atau baca README.md di folder ini untuk petunjuk pengunduhan model.
+

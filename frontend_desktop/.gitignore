@@ -1,0 +1,97 @@
+# ==========================================
+# 1. Project Specific / Tools & Outputs
+# ==========================================
+# Output build backend Go & tools C++ (dist folder)
+dist/
+build/
+output/
+assets/engine/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Temporary local test files / samples
+sample_files/
+
+# ==========================================
+# 2. Flutter / Dart Related
+# ==========================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+doc/api/
+*.symbolDev
+*.symbols
+app.*.map.json
+
+# Web & Desktop Build Outputs
+frontend_desktop/build/
+frontend_desktop/.dart_tool/
+
+# ==========================================
+# 3. Go Backend Related
+# ==========================================
+# Binaries for programs and modules
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.sum.old
+
+# Code coverage / profiling tools
+*.out
+*.prof
+
+# ==========================================
+# 4. Editors & IDEs
+# ==========================================
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio / C++ Build artifacts
+build_cpp/
+*.vcxproj
+*.sln
+*.user
+Debug/
+Release/
+x64/
+
+# ==========================================
+# 5. OS Generated & Miscellaneous
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Migration / temporary logs
+.buildlog/
+.history
+migrate_working_dir/
