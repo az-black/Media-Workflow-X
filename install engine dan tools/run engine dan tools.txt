@@ -1,0 +1,6 @@
+cd Media-Workflow-X\Backend\tools
+.\download_tools.ps1
+
+
+cd C:\projects\test\Media-Workflow-X\Backend
+.\build.ps1
