@@ -1,0 +1,28 @@
+# Auto-detect text files and normalize line endings
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.iss text eol=crlf
+
+# =============================================================================
+# GitHub Linguist Language Stats Configuration
+# =============================================================================
+
+# Installer & Setup scripts (dianggap sebagai installer/tooling pendukung)
+installer/** linguist-vendored=true
+setup_tools.bat linguist-vendored=true
+setup_tools.ps1 linguist-vendored=true
+
+# Platform runner templates Flutter (Android, iOS, macOS, Linux, Web)
+frontend_desktop/android/** linguist-vendored=true
+frontend_desktop/ios/** linguist-vendored=true
+frontend_desktop/linux/** linguist-vendored=true
+frontend_desktop/macos/** linguist-vendored=true
+frontend_desktop/web/** linguist-vendored=true
+
+# Kode Sumber Inti Aplikasi (Akan dihitung sebagai bahasa utama: Dart, Go, C++)
+frontend_desktop/lib/** linguist-detectable=true
+frontend_desktop/lib/** linguist-language=Dart
+Backend/internal/** linguist-detectable=true
+Backend/main.go linguist-detectable=true
+Backend/tools/pdf_compressor/*.cpp linguist-detectable=true
